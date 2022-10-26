@@ -1,0 +1,19 @@
+#newinput{
+    max-width: 400px;
+}
+#tablefull{
+    margin-left: 43%;
+}
+#sectionID
+{
+    background: #e8ded2;
+}
+.footer-section
+{
+    background:  #0e0d0d;
+    padding: 20px;
+}
+#thumbnail{
+    max-height: 200px;
+    margin: 20px;
+}

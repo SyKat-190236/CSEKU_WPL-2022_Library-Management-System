@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5502/admin.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="./Library Management System_files/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <style>
+            @font-face {
+                font-family: Canela-Bold;
+                src: url(fonts/Canela-Bold.ttf);
+            }
+    
+            @font-face {
+                font-family: NeueHaasDisplay-Roman;
+                src: url(fonts/NeueHaasDisplay-Roman.ttf);
+            }
+    
+            .display-4 {
+                color: #007BFF;
+                font-family: Canela-Bold;
+            }
+    
+            .text-muted {
+                color: #D91F34 !important;
+                font-family: NeueHaasDisplay-Roman;
+                font-weight: 500;
+            }
+    
+            input,
+            button {
+                font-family: NeueHaasDisplay-Roman;
+            }
+    
+            .login,
+            .image {
+                min-height: 100vh;
+            }
+    
+            .bg-image {
+                background-image: url('img/alt.png');
+                background-size: cover;
+                background-position: center center;
+            }
+    
+            .logoutLblPos {
+                position: fixed;
+                right: 10px;
+                top: 5px;
+            }
+        </style>
+        <title>Library Management System</title>
+        <script type="text/javascript">
+            function validatePin() {
+                var p = document.getElementById('pin').value;
+                if (p !== '9064') {
+                    alert("Entered PIN is incorrect or missing!");
+                    header("location: admin.html");
+                }
+                else {
+                    window.location.replace("dashadmin.php");
+
+                }
+            }
+        </script>
+    </head>
+
+<body data-new-gr-c-s-check-loaded="14.1078.0" data-gr-ext-installed="">
+
+	<header>
+
+        <div id="navbarID">
+            <nav class="navbar navbar-expand-md navbar-dark " id="nav1">
+                <div class="container-fluid">
+
+
+
+                    <h4> <a class="link-dark" href="http://127.0.0.1:5502/homepage.html">Library Management System</a></h4>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+	<main>
+
+		<section id="sectionID">
+
+
+            <div class="container-fluid">
+
+                        <div class="login d-flex align-items-center py-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-10 col-xl-7 mx-auto">
+                                        <h3 class="display-4 text-center">Welcome Admin!</h3>
+                                        <p class="text-muted mb-3 text-center">Enter the Security PIN to view all the books.</p>
+                                        <form action="http://127.0.0.1:5502/dashadmin.php" method="POST">
+                                            <div class="form-group mb-3">
+                                                <input id="pin" type="password" placeholder="Security PIN" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                            </div>
+                                            <br>
+                                            <button type="submit" onclick="validatePin()" class="btn btn-warning btn-block mb-2 rounded-pill shadow-sm"><a href="http://127.0.0.1:5502/addbooks.html">View</a>
+                                            </button>
+                                        </form>
+                                        <label class="logoutLblPos">
+                                            <div style="float:left; text-align:center; padding:5px;">
+                                                <a href="http://127.0.0.1:5502/addbooks.html"><i class="fa fa-user"></i></a><br>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                
+            </div>
+           
+
+
+
+		</section>
+
+	</main>
+
+
+
+
+
+	<script src="./Library Management System_files/bootstrap.bundle.min.js.download" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

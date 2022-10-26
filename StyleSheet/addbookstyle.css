@@ -1,0 +1,23 @@
+#thumbnail{
+    max-height: 80px;
+    margin: 20px;
+}
+#workbtn{
+    margin: 10px;
+}
+#center_button{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+#sectionID
+{
+    background: #e8ded2;
+}
+.footer-section
+{
+    background:  #0e0d0d;
+    padding: 20px;
+}
